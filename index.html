@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cristall - Roblox Executor</title>
     <style>
-        /* Reset and Base Styling */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            cursor: none; /* Hide default cursor */
         }
         body {
             font-family: Arial, sans-serif;
@@ -19,27 +16,6 @@
             color: #f2f2f2;
             overflow-x: hidden;
         }
-
-        /* Custom Cursor */
-        #custom-cursor {
-            position: fixed;
-            width: 20px; /* Increased size */
-            height: 20px; /* Increased size */
-            background-color: #fff;
-            border: 2px solid #000;
-            border-radius: 50%;
-            pointer-events: none;
-            transform: translate(-50%, -50%);
-            transition: transform 0.05s ease;
-        }
-        /* Cursor Hover Effect */
-        button:hover ~ #custom-cursor {
-            width: 30px;
-            height: 30px;
-            background-color: #444;
-        }
-
-        /* Main Container */
         .container {
             display: flex;
             flex-direction: column;
@@ -48,8 +24,6 @@
             height: 100vh;
             text-align: center;
         }
-
-        /* Header Styling */
         h1 {
             font-size: 2.8rem;
             font-weight: 700;
@@ -57,15 +31,11 @@
             margin-bottom: 25px;
             text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
         }
-
-        /* Button Container */
         .buttons {
             display: flex;
             gap: 15px;
             margin-top: 20px;
         }
-
-        /* Button Styling */
         .buttons button {
             background-color: transparent;
             color: #f2f2f2;
@@ -83,8 +53,6 @@
             transform: scale(1.05);
             box-shadow: 0 5px 12px rgba(255, 255, 255, 0.2);
         }
-
-        /* Price Section */
         #price-section {
             padding: 50px 20px;
             background: rgba(0, 0, 0, 0.5);
@@ -115,8 +83,6 @@
         #price-section li:hover {
             background: #444;
         }
-
-        /* Feature Section */
         #feature-section {
             padding: 50px 20px;
             background: rgba(0, 0, 0, 0.5);
@@ -147,13 +113,9 @@
         #feature-section li:hover {
             background: #444;
         }
-
-        /* Smooth Scroll and Animation */
         html {
             scroll-behavior: smooth;
         }
-
-        /* Background Visuals */
         .background {
             position: fixed;
             top: 0;
@@ -169,13 +131,7 @@
     </style>
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div id="custom-cursor"></div>
-
-    <!-- Background Visuals -->
     <div class="background"></div>
-
-    <!-- Main Content -->
     <div class="container">
         <h1>Cristall - Roblox Executor</h1>
         <div class="buttons">
@@ -184,8 +140,6 @@
             <button id="discord-btn">Discord</button>
         </div>
     </div>
-
-    <!-- Price Section -->
     <div id="price-section">
         <h2>Prices</h2>
         <ul>
@@ -194,8 +148,6 @@
             <li>Lifetime Key - $36</li>
         </ul>
     </div>
-
-    <!-- Feature Section -->
     <div id="feature-section">
         <h2>Features</h2>
         <ul>
@@ -204,32 +156,15 @@
             <li>Fast Execution Speeds</li>
         </ul>
     </div>
-
-    <!-- JavaScript -->
     <script>
-        // Custom Cursor Movement with Smooth Following
-        const cursor = document.getElementById('custom-cursor');
-        let mouseX = 0, mouseY = 0;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.pageX;
-            mouseY = e.pageY;
-            cursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-        });
-
-        // Scroll to Price Section
         document.getElementById('price-btn').onclick = () => {
             document.getElementById('price-section').scrollIntoView({ behavior: 'smooth' });
         };
-
-        // Scroll to Feature Section
         document.getElementById('features-btn').onclick = () => {
             document.getElementById('feature-section').scrollIntoView({ behavior: 'smooth' });
         };
-
-        // Redirect to Discord Invite
         document.getElementById('discord-btn').onclick = () => {
-            window.location.href = 'https://discord.gg/FYKtUZWBj8'; // Replace with actual invite link
+            window.location.href = 'https://discord.gg/FYKtUZWBj8';
         };
     </script>
 </body>
